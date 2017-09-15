@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="accounts-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <account-card pepe="la come">Hello [[prop1]]!</account-card>
+    
+  </template>
+
+  <script>
+    /**
+     * `accounts-element`
+     * List of accounts
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class AccountsElement extends Polymer.Element {
+      static get is() { return 'accounts-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'accounts-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(AccountsElement.is, AccountsElement);
+  </script>
+</dom-module>
